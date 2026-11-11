@@ -340,7 +340,7 @@
             // 
             nudPrecoVenda.DecimalPlaces = 2;
             nudPrecoVenda.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nudPrecoVenda.Location = new Point(476, 33);
+            nudPrecoVenda.Location = new Point(476, 31);
             nudPrecoVenda.Margin = new Padding(5);
             nudPrecoVenda.Name = "nudPrecoVenda";
             nudPrecoVenda.Size = new Size(92, 21);
@@ -349,7 +349,7 @@
             // nudStockMinimo
             // 
             nudStockMinimo.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nudStockMinimo.Location = new Point(408, 103);
+            nudStockMinimo.Location = new Point(408, 120);
             nudStockMinimo.Margin = new Padding(5);
             nudStockMinimo.Name = "nudStockMinimo";
             nudStockMinimo.Size = new Size(97, 21);
@@ -358,7 +358,7 @@
             // nudStockInicial
             // 
             nudStockInicial.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nudStockInicial.Location = new Point(96, 124);
+            nudStockInicial.Location = new Point(96, 120);
             nudStockInicial.Margin = new Padding(5);
             nudStockInicial.Name = "nudStockInicial";
             nudStockInicial.Size = new Size(83, 21);
@@ -378,7 +378,7 @@
             // 
             nudPrecoCusto.DecimalPlaces = 2;
             nudPrecoCusto.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nudPrecoCusto.Location = new Point(141, 33);
+            nudPrecoCusto.Location = new Point(141, 31);
             nudPrecoCusto.Margin = new Padding(5);
             nudPrecoCusto.Name = "nudPrecoCusto";
             nudPrecoCusto.Size = new Size(103, 21);
@@ -437,7 +437,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(297, 111);
+            label6.Location = new Point(297, 124);
             label6.Name = "label6";
             label6.Size = new Size(80, 13);
             label6.TabIndex = 4;
