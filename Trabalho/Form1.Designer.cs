@@ -1,16 +1,13 @@
-﻿namespace Trabalho
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Trabalho
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +19,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -84,7 +77,6 @@
             panel1.Controls.Add(label1);
             panel1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             panel1.Location = new Point(-2, -3);
-            panel1.Margin = new Padding(5);
             panel1.Name = "panel1";
             panel1.Size = new Size(1305, 80);
             panel1.TabIndex = 0;
@@ -105,7 +97,6 @@
             label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(80, 15);
-            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new Size(239, 30);
             label1.TabIndex = 0;
@@ -126,7 +117,7 @@
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(12, 85);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(894, 195);
@@ -181,8 +172,9 @@
             // 
             txtNome.Location = new Point(205, 57);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(419, 26);
+            txtNome.Size = new Size(419, 27);
             txtNome.TabIndex = 10;
+            txtNome.TextChanged += txtNome_TextChanged;
             // 
             // cmbCategoria
             // 
@@ -277,19 +269,20 @@
             btnSalvar.TabIndex = 2;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnLimpar
             // 
             btnLimpar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLimpar.Image = (Image)resources.GetObject("btnLimpar.Image");
             btnLimpar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLimpar.Location = new Point(499, 455);
+            btnLimpar.Location = new Point(496, 455);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.Size = new Size(116, 46);
             btnLimpar.TabIndex = 3;
             btnLimpar.Text = "Limpar";
             btnLimpar.UseVisualStyleBackColor = true;
-            btnLimpar.Click += button2_Click;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // btnNovo
             // 
@@ -302,6 +295,7 @@
             btnNovo.TabIndex = 4;
             btnNovo.Text = "Novo";
             btnNovo.UseVisualStyleBackColor = true;
+            btnNovo.Click += btnNovo_Click;
             // 
             // btnExcluir
             // 
@@ -314,6 +308,7 @@
             btnExcluir.TabIndex = 5;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // groupBox2
             // 
@@ -341,7 +336,6 @@
             nudPrecoVenda.DecimalPlaces = 2;
             nudPrecoVenda.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nudPrecoVenda.Location = new Point(476, 31);
-            nudPrecoVenda.Margin = new Padding(5);
             nudPrecoVenda.Name = "nudPrecoVenda";
             nudPrecoVenda.Size = new Size(92, 21);
             nudPrecoVenda.TabIndex = 13;
@@ -350,7 +344,6 @@
             // 
             nudStockMinimo.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nudStockMinimo.Location = new Point(408, 120);
-            nudStockMinimo.Margin = new Padding(5);
             nudStockMinimo.Name = "nudStockMinimo";
             nudStockMinimo.Size = new Size(97, 21);
             nudStockMinimo.TabIndex = 12;
@@ -359,7 +352,6 @@
             // 
             nudStockInicial.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nudStockInicial.Location = new Point(96, 120);
-            nudStockInicial.Margin = new Padding(5);
             nudStockInicial.Name = "nudStockInicial";
             nudStockInicial.Size = new Size(83, 21);
             nudStockInicial.TabIndex = 11;
@@ -379,7 +371,6 @@
             nudPrecoCusto.DecimalPlaces = 2;
             nudPrecoCusto.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nudPrecoCusto.Location = new Point(141, 31);
-            nudPrecoCusto.Margin = new Padding(5);
             nudPrecoCusto.Name = "nudPrecoCusto";
             nudPrecoCusto.Size = new Size(103, 21);
             nudPrecoCusto.TabIndex = 9;
@@ -502,7 +493,6 @@
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(5);
             Name = "Form1";
             Text = "Cadastro de Produtos";
             Load += Form1_Load;
